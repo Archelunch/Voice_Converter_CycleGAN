@@ -110,7 +110,7 @@ def train(train_A_dir, train_B_dir, model_dir, model_name, random_seed, validati
                 #print('Iteration: %d, Generator Loss : %f, Discriminator Loss : %f' % (num_iterations, generator_loss, discriminator_loss))
                 print('Iteration: {:07d}, Generator Learning Rate: {:.7f}, Discriminator Learning Rate: {:.7f}, Generator Loss : {:.3f}, Discriminator Loss : {:.3f}'.format(num_iterations, generator_learning_rate, discriminator_learning_rate, generator_loss, discriminator_loss))
 
-        if epoch + 1 % 101 == 0:
+        if (epoch + 1) % 1000 == 0:
             model.save(directory = model_dir, filename = model_name)
             print("Saved")
 
